@@ -1,48 +1,39 @@
-class Form {
-  constructor() {
-    this.input = createInput("").attribute("placeholder", "Enter your name");
-    this.playButton = createButton("Play");
-    this.titleImg = createImg("./assets/title.png", "game title");
-    this.greeting = createElement("h2");
-  }
+class Form{
+constructor(){
+this.input= createInput('Enter your name')
+this.playButton=createButton('Play')
+this.greeting=createElement('h2')
+this.titleimg=createImg("assets/title.png");
 
-  setElementsPosition() {
-    this.titleImg.position(120, 160);
-    this.input.position(width / 2 - 110, height / 2 - 80);
-    this.playButton.position(width / 2 - 90, height / 2 - 20);
-    this.greeting.position(width / 2 - 300, height / 2 - 100);
-  }
+}
+hide(){
+    this.input.hide()
+    this.playButton.hide()
+    this.greeting.hide()
+    this.titleimg.hide()
 
-  setElementsStyle() {
-    this.titleImg.class("gameTitle");
-   
-  }
+}
 
-  //BP
-  hide() {
-    this.greeting.hide();
-    this.playButton.hide();
-    this.input.hide();
-  }
+display(){
 
-  //BP
-  handleMousePressed() {
-    this.playButton.mousePressed(() => {
-      this.input.hide();
-      this.playButton.hide();
-      var message = `
-      Hello ${this.input.value()}
-      </br>wait for another player to join...`;
-      this.greeting.html(message);
-      
-      //player.addPlayer();
-     // player.getDistance(); //BP
-    });
-  }
+this.titleimg.position(100,100)
+this.input.position(200,200)
+this.playButton.position(200,300)
+this.greeting.position(200,200)
 
-  display() {
-    this.setElementsPosition();
-    this.setElementsStyle();
-    this.handleMousePressed();
-  }
+this.playButton.mousePressed(()=>{
+    this.titleimg.hide()
+this.input.hide();
+this.playButton.hide();
+var name=this.input.value();
+this.greeting.html("HELLO"+name+"Please wait for other players to join")
+
+})
+
+
+}
+
+
+
+
 }
