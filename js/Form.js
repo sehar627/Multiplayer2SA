@@ -10,7 +10,7 @@ hide(){
     this.input.hide()
     this.playButton.hide()
     this.greeting.hide()
-    this.titleimg.hide()
+   
 
 }
 
@@ -22,7 +22,7 @@ this.playButton.position(200,300)
 this.greeting.position(200,200)
 
 this.playButton.mousePressed(()=>{
-    this.titleimg.hide()
+
 this.input.hide();
 this.playButton.hide();
 var name=this.input.value();
