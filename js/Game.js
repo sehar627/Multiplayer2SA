@@ -33,16 +33,11 @@ class Game {
   }
 
 
-  //BP
-  handleElements() {
-    form.hide();
-    form.titleImg.position(40, 50);
-    form.titleImg.class("gameTitleAfterEffect");
-  }
+ 
 
   //SA
   play() {
-    this.handleElements();
+   form.hide()
 
       drawSprites();
     }
